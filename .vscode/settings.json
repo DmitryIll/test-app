@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/rancher/k3d/main/pkg/config/config.versions.schema.json": "file:///d%3A/__%D0%A3%D1%87%D0%B5%D0%B1%D0%B0/DevOps/21_%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/test-app/kuber/site.yaml"
+    }
+}
