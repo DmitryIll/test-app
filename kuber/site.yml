@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site-deployment
+  labels:
+    app: site
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: site
+  template:
+    metadata:
+      labels:
+        app: site
+    spec:
+      containers:
+        - name: site-container
+          image: cr.yandex/crp89b913h17litceuqc/site:1.0
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 80
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: site-service
+spec:
+  selector:
+    app: site
+  ports:
+    - name: site-port
+      protocol: TCP
+      port: 9080
+      targetPort: 80    
+      
